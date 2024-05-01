@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+.primary-btn{
+    background-color: #FFD21A !important;
+    border-radius: 30px;
+
+}
+
+a{
+    text-decoration: none;
+}
+.blueify{
+    color: #2194AB;
+}
+
+.blueify-bg{
+    background-color: #20b1ce3c;
+}
+
+.hero-tag{
+    border-radius: 25px;
+}
+
+.contact-foot h5{
+    color: white;
+}
+
+.contact-foot .bi{
+    color: #FFD21A !important;
+}
+
+.box {
+    width: 40%;
+  }
+  
+  .box2 {
+    width: 43%;
+  }
+
+  .services .primary-btn {
+    width: 30%;
+  }
+  .box-hold .box {
+    width: 25%;
+  }
+  .contact .contact-cell {
+    background-image: url('../src/assets/officemen4.png');
+    background-size: cover;
+    /* width: 30%; */
+    border-radius: 30px;
+  }
+  
+  .contact-cell span {
+    width: 30%;
+    color: white;
+  }
+  
+  
+  .contact-cell .box {
+    background-color: #20b1cebc;
+    width: 100%;
+    border-radius: 20px;
+  }
+  
+  
+  @media (max-width:700px){
+    .services .box-hold {
+        flex-direction: column;
+      }
+      .services .box-hold {
+        flex-direction: column;
+      }
+    
+      .services .box {
+        width: 100%;
+      }
+    
+      .services .primary-btn {
+        width: 100%;
+      }
+  }

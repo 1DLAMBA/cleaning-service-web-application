@@ -1,0 +1,30 @@
+.footer{
+    background-color: #2194AB;
+    color: white;
+}
+.footer a{
+    text-decoration: none !important;
+    color: white
+}
+
+.footer .body{
+    border-bottom: 1px solid white;
+}
+
+@media (max-width:700px){
+    .footer {
+        padding: 0px !important;
+    }
+    .footer .body{
+        margin: auto;
+        width: 100%;
+        flex-direction: column;
+    }
+    .footer .box{
+        width: 100%;
+    }
+
+    .box{
+        margin: 2%;
+    }
+}

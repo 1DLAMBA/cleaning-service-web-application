@@ -1,0 +1,238 @@
+.hero {
+  background-image: url('../../../assets/landing3.png');
+  /* background-attachment: fixed; */
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 10%;
+}
+
+.content {
+  /* padding-top: 5%; */
+}
+
+.box-hold {
+  /* width: 100%; */
+}
+
+
+
+
+
+
+.testimonials {
+  /* background-color: #f0f0f0; */
+}
+
+.box .officemen {
+  border-radius: 50px;
+  background-color: #f0f0f0;
+  /* Background color of the element */
+  position: relative;
+}
+
+.item {
+  position: relative;
+  border-radius: 5px;
+  max-width: 400;
+}
+
+.corner {
+  position: absolute;
+}
+
+#reaction .corner {
+  background: none;
+  height: 10px;
+  width: 10px;
+}
+
+#top-left {
+  top: 0;
+  left: 0;
+  border-radius: 5px 0 0 0;
+  border-top: 2px solid #FFD21A;
+  border-left: 2px solid #FFD21A;
+}
+
+#top-right {
+  top: 0;
+  right: 0;
+  border-radius: 0 10px 0 0;
+  border-top: 2px solid #FFD21A;
+  border-right: 2px solid #FFD21A;
+}
+
+#bottom-right {
+  bottom: 0;
+  right: 0;
+  border-radius: 0 0 5px 0;
+  border-bottom: 2px solid #FFD21A;
+  border-right: 2px solid #FFD21A;
+}
+
+#bottom-left {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 0 0 10px;
+  border-bottom: 2px solid #FFD21A;
+  border-left: 2px solid #FFD21A;
+}
+
+.content {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content img {
+  border-radius: 5px;
+
+}
+
+.icon {
+  height: 24;
+  width: 24;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#reaction .title {
+  color: #FFD21A;
+}
+
+.score {
+  color: '#444444'
+}
+
+
+
+.star {
+  color: #FFD21A;
+  font-size: medium !important;
+}
+
+.about .box {
+  width: 30%;
+  background-image: url('../../../assets/cleaningworkers2.png');
+  background-size: cover;
+  border: 2px solid #FFD21A;
+  padding: 50px;
+  border-radius: 65% / 90%;
+}
+
+.about .box span {
+  margin-top: 10%;
+  margin-bottom: 1%;
+}
+
+.hero-tag {
+  background-color: #20b1cebc;
+  font-size: smaller;
+}
+
+
+@media (max-width:700px) {
+  .hero {
+    background-image: url('../../../assets/landing2.0.png');
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    /* padding: 20px; */
+
+    height: 80vh;
+  }
+
+  .hero:first-child {
+    padding: 3%;
+  }
+
+  .hero-btn button {
+    font-size: small
+  }
+
+  .hero-btn {
+    justify-content: space-between;
+  }
+
+  .hero-btn:last-child {
+    background-color: #f0f0f054 !important;
+    border-radius: 30px;
+  }
+
+  .services {
+    padding: 2px !important;
+  }
+
+  .services:first-child .heading,
+  .serv-btn {
+    font-size: smaller;
+  }
+
+  .services .heading{
+    font-size: 20px !important;
+  }
+
+  
+
+  .carou1,
+  .carou2 {
+    flex-direction: column;
+  }
+
+  .carou1 .box,
+  .carou2 .box {
+    width: 100%;
+
+  }
+
+  .testimonials {
+    margin: 1% !important;
+  }
+
+  .why {
+    margin: 5px !important;
+  }
+
+  .why .sect .box-hold{
+    flex-direction: column;
+  }
+
+  .why img{
+    width: 100%;    
+  }
+
+  .sect .box2 {
+    width: 100%;
+  }
+
+  .about {
+    margin: 0 !important;
+    padding: 10px !important;
+  }
+  .about .box-hold{
+    flex-direction: column-reverse;
+  }
+  .about .box2, .about .box{
+    width: 100%;
+  }
+
+  .contact {
+    margin: 1px !important;
+  }
+  .contact span {
+    width: 100%;
+  }
+  .contact .min-box{
+    /* flex-direction: column; */
+    width: 100%;
+  }
+  .min-box span{
+    margin: 0px !important;
+  }
+
+}
