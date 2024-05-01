@@ -1,0 +1,73 @@
+{
+  "hash": "4a985c17",
+  "configHash": "066bc977",
+  "lockfileHash": "10492976",
+  "browserHash": "5b88d394",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "d951acda",
+      "needsInterop": false
+    },
+    "@angular/common/http": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "47fff6c6",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "d7ff61d2",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "e27f0c53",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "120c36fd",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "15582d7d",
+      "needsInterop": false
+    },
+    "primeng/carousel": {
+      "src": "../../../../../node_modules/primeng/fesm2022/primeng-carousel.mjs",
+      "file": "primeng_carousel.js",
+      "fileHash": "8ecd2f79",
+      "needsInterop": false
+    },
+    "@ng-bootstrap/ng-bootstrap": {
+      "src": "../../../../../node_modules/@ng-bootstrap/ng-bootstrap/fesm2022/ng-bootstrap.mjs",
+      "file": "@ng-bootstrap_ng-bootstrap.js",
+      "fileHash": "37362e0a",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-HUMRT7UT": {
+      "file": "chunk-HUMRT7UT.js"
+    },
+    "chunk-FDGLRH7H": {
+      "file": "chunk-FDGLRH7H.js"
+    },
+    "chunk-4OHU7PCT": {
+      "file": "chunk-4OHU7PCT.js"
+    },
+    "chunk-VR7XAWCT": {
+      "file": "chunk-VR7XAWCT.js"
+    },
+    "chunk-ERVMBA57": {
+      "file": "chunk-ERVMBA57.js"
+    }
+  }
+}
