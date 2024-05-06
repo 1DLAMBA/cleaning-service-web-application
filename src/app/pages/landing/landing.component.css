@@ -177,8 +177,6 @@
     font-size: 20px !important;
   }
 
-  
-
   .carou1,
   .carou2 {
     flex-direction: column;
@@ -221,18 +219,6 @@
     width: 100%;
   }
 
-  .contact {
-    margin: 1px !important;
-  }
-  .contact span {
-    width: 100%;
-  }
-  .contact .min-box{
-    /* flex-direction: column; */
-    width: 100%;
-  }
-  .min-box span{
-    margin: 0px !important;
-  }
+ 
 
 }

@@ -6,6 +6,9 @@
     text-decoration: none !important;
     color: white
 }
+.footer .box{
+    width: 20%;
+}
 
 .footer .body{
     border-bottom: 1px solid white;
@@ -17,7 +20,7 @@
     }
     .footer .body{
         margin: auto;
-        width: 100%;
+        /* width: 100%; */
         flex-direction: column;
     }
     .footer .box{

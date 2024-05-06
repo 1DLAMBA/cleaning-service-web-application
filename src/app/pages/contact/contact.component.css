@@ -1,0 +1,30 @@
+.hero {
+    background-image: url('../../../assets/contactback.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:  70vh;
+    padding: 10%;
+    color: white;
+  }
+
+  .hero-btn button:last-child{
+    color: white;
+  }
+
+  .mini-box{
+    width: 20%;
+  }
+
+  .accordion button{
+    font-weight: 500 !important;
+  }
+
+  @media (max-width:700px){
+    .mini-box{
+      width: 100%;
+    }
+    .hero {
+      background-image: url('../../../assets/contactback2.png');
+      background-size: cover;}
+
+  }

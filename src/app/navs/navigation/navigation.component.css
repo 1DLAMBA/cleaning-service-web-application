@@ -27,6 +27,8 @@
 }
 .header{
     width: 100%;
+    z-index: 2;
+
 }
 .contact-icon {
     color: #02adad;
@@ -42,18 +44,33 @@
 .navigations a{
     color: black;
     margin-top: 3%;
+    padding: 2px 0;
 }
 .navigations a:hover{
     color: #02adad;
 }
+
 .logo{
     margin-left: 100px;
+   /* filter:  drop-shadow(3px 2px 9px #000000); */
 }
 .small-screen .small-cont{
     border-bottom: 1px solid #c6c6c6;
 }
 .small-header button{
     font-size:xx-large;
+}
+.primary-btn{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+.small-header{
+    position: sticky;
+    top: 0px;
+}
+
+.navigations {
+    height: 50px;
 }
 @media (max-width:700px){
     .pos{
@@ -62,12 +79,29 @@
     .header2{
         display: none  !important;
     }
+    .small-header{
+        z-index: 5;
+        background-color: rgba(255, 255, 255, 0.77);
+        backdrop-filter: blur(5px);
+    }
 }
 
 @media (min-width:700px){
+    .small-header{
+        display: none !important;
+        z-index: 5;
+    }
     .small-screen{
-        display: none;
+        display: none !important;
+
     }
     
     
+    
+}
+.active{
+    border-bottom: 2px solid #02adad;
+    color: #02adad !important;
+
+
 }

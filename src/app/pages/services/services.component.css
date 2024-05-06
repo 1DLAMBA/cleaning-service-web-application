@@ -11,3 +11,12 @@
   .hero-btn button:last-child{
     color: white;
   }
+  @media (max-width:700px){
+    .hero{
+      display: flex;
+      height: 60vh;
+    }
+    .hero:first{
+      margin: auto;
+    }
+  }

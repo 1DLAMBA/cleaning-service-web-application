@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
+
 .primary-btn{
     background-color: #FFD21A !important;
     border-radius: 30px;
@@ -28,7 +30,7 @@ a{
     color: #FFD21A !important;
 }
 
-.box {
+.box {  
     width: 40%;
   }
   
@@ -63,6 +65,14 @@ a{
   
   
   @media (max-width:700px){
+    .hero-btn button{
+      font-size: 10px;
+    }
+    
+    .primary-btn{
+    border-radius: 40px;
+
+    }
     .services .box-hold {
         flex-direction: column;
       }
@@ -73,8 +83,25 @@ a{
       .services .box {
         width: 100%;
       }
+      .services{
+        margin: 10px !important;
+        padding: 10px !important;
+      }
     
       .services .primary-btn {
         width: 100%;
+      }
+      .contact {
+        margin: 1px !important;
+      }
+      .contact span {
+        width: 100%;
+      }
+      .contact .min-box{
+        /* flex-direction: column; */
+        width: 100%;
+      }
+      .min-box span{
+        margin: 0px !important;
       }
   }
