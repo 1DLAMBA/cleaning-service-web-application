@@ -1,0 +1,22 @@
+.hero {
+    background-image: url('../../../assets/serviceback.png');
+    /* background-attachment: fixed; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 10%;
+    color: white;
+  }
+
+  .hero-btn button:last-child{
+    color: white;
+  }
+  @media (max-width:700px){
+    .hero{
+      display: flex;
+      height: 60vh;
+    }
+    .hero:first{
+      margin: auto;
+    }
+  }

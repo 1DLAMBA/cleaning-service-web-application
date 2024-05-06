@@ -1,0 +1,98 @@
+<div class="pos container-fluid">
+
+    <div class="d-flex justify-content-between header head">
+        <div class="contact d-flex pt-2  justify-content-between gap-5">
+    
+            <div class="address d-flex">
+                <span class="contact-icon bi bi-geo-alt-fill"></span>
+                <p>195 Wellington St S, Hamilton, ON L8N 1Y1</p>
+            </div>
+    
+            <div class="phone d-flex">
+                <span class=" contact-icon bi bi-telephone-fill"></span>
+                <p>289-659-2275</p>
+            </div>
+    
+        </div>
+        <div class="socials d-flex justify-content-around">
+    
+            <span class=" soc-icon  px-3">
+                <span class="bi bi-envelope-fill "></span>
+    
+            </span>
+    
+            <span class="soc-icon  px-3">
+                <span class="bi bi-instagram"></span>
+            </span>
+    
+            <span class=" soc-icon px-3 ">
+                <span class="bi bi-facebook "></span>
+    
+            </span>
+    
+        </div>
+    </div>
+</div>
+<div class="header pb-3 header2 d-flex justify-content-between">
+    <div class="logo ">
+        <img src="../../../assets/logo.png" width="60">
+    </div>
+    <div class="navigations d-flex gap-5">
+        <a class="nav" routerLinkActive="active" [routerLinkActiveOptions]={exact:true} routerLink='' >Home</a>
+        <a class="nav" routerLinkActive="active"  routerLink='services' >Services</a>
+        <a class="nav" routerLinkActive="active"  routerLink='contact' > Contact Us</a>
+        <a class="nav" routerLinkActive="active"  routerLink='about'>About Us</a>
+        <button class="primary-btn btn m-1" routerLink='booking'><b>Book a service now</b></button>
+    </div>
+</div>
+<div class="small-screen p-2">
+    <div class="small-cont">
+        <div class="address d-flex">
+            <span class="contact-icon bi bi-geo-alt-fill"></span>
+            <p>195 Wellington St S, Hamilton, ON L8N 1Y1</p>
+        </div>
+
+        <div class="phone d-flex">
+            <span class=" contact-icon bi bi-telephone-fill"></span>
+            <p>289-659-2275</p>
+        </div>
+    </div>
+</div>
+<div class="small-header d-flex justify-content-between">
+    <img src="../../../assets/logo.png" width="60">
+    <button class="btn bi-text-right" (click)="openFullscreen(content)"></button>
+</div>
+<ng-template #content let-modal>
+	<div class="modal-header">
+        <button  class="primary-btn btn m-1" (click)="modal.dismiss('Cross click')" routerLink='booking'><b>Book a service now</b></button>
+
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body d-flex flex-column">
+        <div class="navigations d-flex flex-column gap-5">
+            <a class="nav" (click)="modal.dismiss('Cross click')" routerLinkActive="active" [routerLinkActiveOptions]={exact:true} routerLink='' >Home</a>
+            <a class="nav" (click)="modal.dismiss('Cross click')" routerLinkActive="active"  routerLink='services' >Services</a>
+            <a class="nav" (click)="modal.dismiss('Cross click')" routerLinkActive="active"  routerLink='contact' > Contact Us</a>
+            <a class="nav" (click)="modal.dismiss('Cross click')" routerLinkActive="active"  routerLink='about'>About Us</a>
+        </div>
+	</div>
+    <div class="d-flex mt-5 modal-footer">
+        <div class=" d-flex m-auto justify-content-between gap-5">
+        
+                <span class=" soc-icon  px-3">
+                    <span class="bi bi-envelope-fill "></span>
+        
+                </span>
+        
+                <span class="soc-icon  px-3">
+                    <span class="bi bi-instagram"></span>
+                </span>
+        
+                <span class=" soc-icon px-3 ">
+                    <span class="bi bi-facebook "></span>
+        
+                </span>
+        
+            </div>
+    </div>
+</ng-template>

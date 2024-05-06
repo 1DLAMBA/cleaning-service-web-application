@@ -1,0 +1,183 @@
+<div class="card mx-4 p-5">
+
+
+    <!-- <ejs-grid [dataSource]='appointments' [searchSettings]='searchOptions' allowSearching='true'>
+  <e-columns>
+    <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
+    <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
+    <e-column field='Freight' headerText='Freight' textAlign='Right' format='C2' width=90></e-column>
+    <e-column field='OrderDate' headerText='Order Date' textAlign='Right' format='yMd' width=120></e-column>
+  </e-columns>
+</ejs-grid> -->
+
+
+<ng-template #content let-c="close" let-d="dismiss">
+    <div *ngIf="!infoLoader">
+        <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">{{singleresult.name}}</h4>
+            <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+        </div>
+        <div class="modal-body">
+            <p>
+                <span class="blueify bi bi-geo-alt-fill"></span>
+                <b>Full Address:</b>
+            {{singleresult.address}}
+    
+            </p>
+    
+            <p>
+                <span class="blueify bi bi-chat-quote"></span>
+                <b>
+                    Additional Comments:
+                </b>
+            {{singleresult.additional_comments}}
+    
+            </p>
+            <p>
+                <span class="blueify bi bi-telephone"></span>
+                <b>
+                    Phone Number:
+                </b>
+            {{singleresult.phone_number}}
+    
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button *ngIf="!buttonLoader2  "  type="button" class="btn btn-outline-danger" (click)="updateStatus(singleresult.id, 'decline')">Decline</button>
+    
+            <div *ngIf="buttonLoader2"  >
+            <button disabled type="button" class="btn btn-outline-danger" (click)="updateStatus(singleresult.id, 'decline')"><span class="spinner-border spinner-border-sm" role="status"></span>Decline</button>
+            </div>
+    
+            <a *ngIf="!buttonLoader1  " href="mailto:{{singleresult.email}}?subject=A%20and%20B%20Services%20Confrimation%20Email"><button type="button" class="btn primary-btn" (click)="updateStatus(singleresult.id, 'approve')">Send the quote</button></a>
+            <div *ngIf="buttonLoader1"  >
+                <a disabled  href="mailto:{{singleresult.email}}?subject=A%20and%20B%20Services%20Confrimation%20Email"><button type="button" class="btn primary-btn" (click)="updateStatus(singleresult.id, 'approve')"><span class="spinner-border spinner-border-sm" role="status"></span> Send the quote</button></a>
+            </div>
+        </div>
+    </div>
+	<div *ngIf="infoLoader" class="d-flex p-5">
+        <span class="spinner-border spinner-border-lg m-auto" role="status"></span>
+    </div>
+</ng-template>
+
+
+    <div *ngIf="appointments">
+        <form>
+            <div class="mb-3 row">
+                <label for="table-filtering-search" class=" bi bi-search col-xs-3 col-sm-auto blueify col-form-label"></label>
+                <div class="col-xs-3 col-sm-auto">
+                    <input id="table-filtering-search" class=" form-control" type="text" [(ngModel)]="searchTerm" (input)="onSearchTermChange($event)" />
+                </div>
+            </div>
+        </form>
+        <div class="card2">
+
+            <table data-aos="fade-up" data-aos-duration="1000" *ngIf="ViewTable" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope ="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">No of Rooms</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr  *ngFor="let appointment of appointments; let i = index">
+                        <th scope="row">{{ i + 1 }}</th>
+                        <td>
+                            {{ appointment.name }}<br>
+                            <small>{{ appointment.email }}</small>
+                        </td>
+                        <td>{{ appointment.address }}</td>
+                        <td>{{ appointment.number_of_rooms }}</td>
+                        <td>
+                            <div class="text-warning" *ngIf="appointment.status ==='pending'">
+                                <p-tag icon="bi-hourglass-split" severity="warning" value="Pending" [rounded]="true"></p-tag>
+                            </div>
+                            <div class="text-warning" *ngIf="appointment.status ==='approve'">
+                                <p-tag icon="bi-check-circle" severity="success" value="Accepted" [rounded]="true"></p-tag>
+                            </div>
+                            <div class="text-warning" *ngIf="appointment.status ==='decline'">
+                                <p-tag icon="bi-x-circle" severity="danger" value="Declined" [rounded]="true"></p-tag>
+                            </div>
+                        </td>
+                        <td>
+                            <div *ngIf="isFutureDate(appointment.date_and_time)">
+                                <span class="bi bi-calender4-week blueify"></span>
+                            </div>
+                            <div *ngIf="isPastDate(appointment.date_and_time)">
+                                <span class="primary-danger  bi bi-calender4-week"></span>
+                            </div>
+                            <div *ngIf="isSameDay(appointment.date_and_time)">
+                                <span class="primary-success bi bi-calender4-week"></span>
+                            </div>
+                            <p>{{ appointment.date_and_time | date:'medium'}}</p>
+                        </td>
+                        <td><button class="bi bi-eye btn btn-outline-success " (click)="open(content, appointment.id)"> View Details</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table *ngIf="!ViewTable && searchResults" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let appointment of searchResults; let i = index">
+                        <th scope="row">{{ i + 1 }}</th>
+                        <td>
+                            {{ appointment.name }}<br>
+                            <small>{{ appointment.email }}</small>
+                        </td>
+                        <td>{{ appointment.address }}</td>
+                        <td>
+                            <div class="text-warning" *ngIf="appointment.status ==='pending'">
+                                <p-tag icon="bi-hourglass-split" severity="warning" value="Pending" [rounded]="true"></p-tag>
+                            </div>
+                            <div class="text-warning" *ngIf="appointment.status ==='accepted'">
+                                <p-tag icon="bi-check-circle" severity="success" value="Accepted" [rounded]="true"></p-tag>
+                            </div>
+                            <div class="text-warning" *ngIf="appointment.status ==='declined'">
+                                <p-tag icon="bi-x-circle" severity="warning" value="Declined" [rounded]="true"></p-tag>
+                            </div>
+                        </td>
+                        <td>
+                            <div *ngIf="isFutureDate(appointment.date_and_time)">
+                                <span class="bi bi-calender4-week blueify"></span>
+                            </div>
+                            <div *ngIf="isPastDate(appointment.date_and_time)">
+                                <span class="primary-danger  bi bi-calender4-week"></span>
+                            </div>
+                            <div *ngIf="isSameDay(appointment.date_and_time)">
+                                <span class="primary-success bi bi-calender4-week"></span>
+                            </div>
+                            <p>{{ appointment.date_and_time | date:'medium'}}</p>
+                        </td>
+                        <td><button class="bi bi-eye btn btn-outline-success " (click)="open(content, appointment.id)"> View Details</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="d-flex justify-content-between p-2">
+            <!-- <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize"
+                (pageChange)="refreshCountries()">
+            </ngb-pagination> -->
+
+            <!-- <select class="form-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="refreshCountries()">
+                <option [ngValue]="2">2 items per page</option>
+                <option [ngValue]="4">4 items per page</option>
+                <option [ngValue]="6">6 items per page</option>
+            </select> -->
+        </div>
+    </div>
+</div>

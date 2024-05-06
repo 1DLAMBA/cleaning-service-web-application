@@ -1,0 +1,107 @@
+.pos{
+    /* position: absolute;
+    top:0px; */
+}
+.soc-icon{
+    background-color: #2194AB;
+    border-radius: 50%;
+   color: white;
+   padding-top: 0.6rem !important;
+   padding-bottom: 0.6rem !important;
+   border: 1px solid #fff;
+   transition: 0.1s;
+
+}
+.soc-icon:hover{
+    background-color: white;
+    border-radius: 50%;
+   color: #2194AB;
+   border: 1px solid #2194AB;
+   padding-top: 0.6rem !important;
+   padding-bottom: 0.6rem !important;
+}
+.socials{
+    padding: 10px;
+    width: 20%;
+
+}
+.header{
+    width: 100%;
+    z-index: 2;
+
+}
+.contact-icon {
+    color: #02adad;
+    margin-right:10px ;
+}
+
+.header2{
+    position: sticky;
+    top: 0px;
+    background-color: rgba(255, 255, 255, 0.77);
+    backdrop-filter: blur(5px);
+}
+.navigations a{
+    color: black;
+    margin-top: 3%;
+    padding: 2px 0;
+}
+.navigations a:hover{
+    color: #02adad;
+}
+
+.logo{
+    margin-left: 100px;
+   /* filter:  drop-shadow(3px 2px 9px #000000); */
+}
+.small-screen .small-cont{
+    border-bottom: 1px solid #c6c6c6;
+}
+.small-header button{
+    font-size:xx-large;
+}
+.primary-btn{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+.small-header{
+    position: sticky;
+    top: 0px;
+}
+
+.navigations {
+    height: 50px;
+}
+@media (max-width:700px){
+    .pos{
+        display: none;
+    }
+    .header2{
+        display: none  !important;
+    }
+    .small-header{
+        z-index: 5;
+        background-color: rgba(255, 255, 255, 0.77);
+        backdrop-filter: blur(5px);
+    }
+}
+
+@media (min-width:700px){
+    .small-header{
+        display: none !important;
+        z-index: 5;
+    }
+    .small-screen{
+        display: none !important;
+
+    }
+    
+    
+    
+}
+.active{
+    border-bottom: 2px solid #02adad;
+    color: #02adad !important;
+
+
+}

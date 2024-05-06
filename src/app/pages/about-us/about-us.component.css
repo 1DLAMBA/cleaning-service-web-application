@@ -1,0 +1,34 @@
+.hero {
+    background-image: url('../../../assets/abtback.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:  100vh;
+    padding: 8%;
+    color: white;
+  }
+
+  .hero-btn button:last-child{
+    color: white;
+  }
+  
+  @media (max-width:700px){
+    .hero{
+      background-image: url('../../../assets/abtback2.png');
+      display: flex;
+      height: 60vh;
+    }
+    .hero:first{
+      margin: auto;
+    }
+
+    .box2{
+      width: 100%;
+    }
+    .box-hold img {
+      width: 100% !important;
+    }
+
+    .box-hold p{
+      font-size: 13px;
+    }
+  }

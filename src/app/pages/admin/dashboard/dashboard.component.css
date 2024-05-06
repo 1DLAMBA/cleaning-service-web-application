@@ -1,0 +1,23 @@
+td button{
+    border-radius: 20px !important;
+}
+
+.card2{
+    overflow-y: scroll;
+    height: 60vh !important;
+}
+
+.modal-footer .btn-outline-danger{
+    border-radius: 50px !important;
+    
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+@media (max-width:700px) {
+    .card{
+        padding: 0 !important;
+    }
+}
