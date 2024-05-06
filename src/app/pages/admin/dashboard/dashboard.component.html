@@ -10,7 +10,21 @@
   </e-columns>
 </ejs-grid> -->
 
+<div *ngIf="skeleton">
 
+    <p-skeleton width="20rem" height="3rem" styleClass="mb-2"></p-skeleton>
+    
+    <div class="d-flex justify-content-between">
+        <p-skeleton width="6rem" height="2rem" styleClass="mb-2"></p-skeleton>
+        <p-skeleton width="6rem" height="2rem" styleClass="mb-2"></p-skeleton>
+        <p-skeleton width="6rem" height="2rem" styleClass="mb-2"></p-skeleton>
+        <p-skeleton width="6rem" height="2rem" styleClass="mb-2"></p-skeleton>
+        <p-skeleton width="6rem" height="2rem" styleClass="mb-2"></p-skeleton>
+        <p-skeleton width="6rem" height="2rem" styleClass="mb-2"></p-skeleton>
+    
+    </div>
+    <p-skeleton height="30rem" styleClass="mb-2"></p-skeleton>
+</div>
 <ng-template #content let-c="close" let-d="dismiss">
     <div *ngIf="!infoLoader">
         <div class="modal-header">
@@ -61,7 +75,7 @@
 </ng-template>
 
 
-    <div *ngIf="appointments">
+    <div *ngIf="!skeleton">
         <form>
             <div class="mb-3 row">
                 <label for="table-filtering-search" class=" bi bi-search col-xs-3 col-sm-auto blueify col-form-label"></label>

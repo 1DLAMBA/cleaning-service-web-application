@@ -44,6 +44,7 @@ export class DashboardComponent implements OnInit {
   filter = new FormControl('', { nonNullable: true });
   singleresult: any;
   buttonLoader2: boolean =false;
+  skeleton:boolean = true;
   // transformName: this;
 
   fetchAppointments() {
@@ -52,6 +53,7 @@ export class DashboardComponent implements OnInit {
         console.log(res.data);
         this.appointments = res.data;
         this.filteredAppointments = res.data;
+        this.skeleton=false;
         this.collectionSize = this.appointments.length;
       },
       error: (err: any) => {

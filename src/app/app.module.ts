@@ -26,6 +26,7 @@ import { GridModule, PagerModule } from '@syncfusion/ej2-angular-grids';
 import { SkeletonModule } from 'primeng/skeleton';
 // import { NgbTableModule } from '@ng-bootstrap/ng-bootstrap/table/table.module';
 import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 
 
@@ -77,7 +78,8 @@ import { ToastModule } from 'primeng/toast';
     ContactComponent
   ],
   providers: [
-    BookingService
+    BookingService,
+    MessageService
   ],
   bootstrap:[AppComponent]
 })
