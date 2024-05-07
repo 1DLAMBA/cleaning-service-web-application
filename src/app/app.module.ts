@@ -27,6 +27,7 @@ import { SkeletonModule } from 'primeng/skeleton';
 // import { NgbTableModule } from '@ng-bootstrap/ng-bootstrap/table/table.module';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
+import { ServicesComponent } from './pages/services/services.component';
 
 
 
@@ -36,6 +37,7 @@ import { MessageService } from 'primeng/api';
     BookingComponent,
     NavigationComponent,
     LandingComponent,
+    ServicesComponent,
     FooterComponent,
     ContactComponent,
     AboutUsComponent,
@@ -75,7 +77,7 @@ import { MessageService } from 'primeng/api';
   exports: [
     FooterComponent,
     NavigationComponent,
-    ContactComponent
+    ContactComponent,
   ],
   providers: [
     BookingService,
