@@ -15,11 +15,15 @@ a{
 }
 
 .blueify-bg{
-    background-color: #20b1ce3c;
+    background-color: #CAE1E5;
 }
 
 .hero-tag{
-    border-radius: 25px;
+    border-radius: 20px;
+}
+
+.hero-btn{
+  height: 47px;
 }
 
 .contact-foot h5{
@@ -28,6 +32,17 @@ a{
 
 .contact-foot .bi{
     color: #FFD21A !important;
+}
+
+.contact-foot{
+}
+
+.contact-foot .primary-btn{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  height: 50px;
+
+
 }
 
 .box {  

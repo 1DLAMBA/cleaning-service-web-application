@@ -91,6 +91,9 @@
         display: none !important;
         z-index: 5;
     }
+    .logo img{
+        width: 100px;
+    }
     .small-screen{
         display: none !important;
 

@@ -1,12 +1,17 @@
 .hero {
-  background-image: url('../../../assets/landing3.png');
+  background-image: url('../../../assets/landing4.png');
   /* background-attachment: fixed; */
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
   padding: 10%;
 }
+@media (min-width:700px){
 
+  h1{
+    font-size: 3rem;
+  }
+}
 .content {
   /* padding-top: 5%; */
 }
@@ -29,6 +34,11 @@
   background-color: #f0f0f0;
   /* Background color of the element */
   position: relative;
+}
+
+.primary-btn{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
 }
 
 .item {
@@ -131,7 +141,7 @@
 }
 
 .hero-tag {
-  background-color: #20b1cebc;
+  /* background-color: #20b1cebc; */
   font-size: smaller;
 }
 
