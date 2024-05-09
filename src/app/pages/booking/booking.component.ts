@@ -81,7 +81,9 @@ export class BookingComponent implements OnInit, OnDestroy{
           this.showNotif(success, ' success-toast')
           this.buttonLoader = false;
           // window.alert('booked');
-          // this.router.navigate(['']);
+          setTimeout(() => {
+            this.router.navigate(['']);
+          }, 2000);
   
         },
         error: (err: any)=>{
@@ -118,8 +120,9 @@ export class BookingComponent implements OnInit, OnDestroy{
           this.showNotif(success, ' success-toast')
           this.buttonLoader = false;
           // window.alert('booked');
-          // this.router.navigate(['']);
-  
+          setTimeout(() => {
+            this.router.navigate(['']);
+          }, 2000);
         },
         error: (err: any)=>{
           console.log(err)

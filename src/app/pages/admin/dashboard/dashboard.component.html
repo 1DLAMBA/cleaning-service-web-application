@@ -92,6 +92,7 @@
                         <th scope ="col">#</th>
                         <th scope="col">Name</th>
                         <th scope="col">Address</th>
+                        <th scope="col">Service</th>
                         <th scope="col">No of Rooms</th>
                         <th scope="col">Status</th>
                         <th scope="col">Date</th>
@@ -106,6 +107,7 @@
                             <small>{{ appointment.email }}</small>
                         </td>
                         <td>{{ appointment.address }}</td>
+                        <td>{{ appointment.type_of_cleaning }}</td>
                         <td>{{ appointment.number_of_rooms }}</td>
                         <td>
                             <div class="text-warning" *ngIf="appointment.status ==='pending'">

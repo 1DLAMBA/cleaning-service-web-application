@@ -54,8 +54,9 @@
                     <select required type="type_of_cleaning" formControlName="type_of_cleaning" class="form-control col-6" id="type_of_cleaning"
                         >
                         <option selected disabled>Select Service</option>
+                        <option value='Custom Type'>Insert Custom Service</option>
                         <option *ngFor="let services of ['Office cleaning', 'Church Cleaning', 'Supermarket Cleaning', 'Industrial Facility Cleaning'
-                                                            , 'Residential/Home Cleaning', 'Healthcare Facility Cleaning ', 'Commercial Building Cleaning', 'Custom Type']">
+                                                            , 'Residential/Home Cleaning', 'Healthcare Facility Cleaning ', 'Commercial Building Cleaning']">
                                                             {{services}}
                         </option>
                         
