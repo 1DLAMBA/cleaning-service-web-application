@@ -28,6 +28,7 @@ import { SkeletonModule } from 'primeng/skeleton';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { ServicesComponent } from './pages/services/services.component';
+import { ToastsContainer } from './toast/toasts-container.component';
 
 
 
@@ -70,7 +71,8 @@ import { ServicesComponent } from './pages/services/services.component';
     AsyncPipe,
     NgbModule,
     SkeletonModule,
-    ToastModule
+    ToastModule,
+    ToastsContainer
 
     
   ],

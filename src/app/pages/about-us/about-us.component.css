@@ -15,9 +15,9 @@
     .hero{
       background-image: url('../../../assets/abtback2.png');
       display: flex;
-      height: 60vh;
+      height: 50vh;
     }
-    .hero:first{
+    .hero:first-child{
       margin: auto;
     }
 

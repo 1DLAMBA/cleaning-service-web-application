@@ -159,6 +159,7 @@
 
   .hero:first-child {
     padding: 3%;
+    margin-top: 10%;
   }
 
   .hero-btn button {

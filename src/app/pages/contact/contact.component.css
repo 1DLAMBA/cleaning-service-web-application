@@ -25,6 +25,12 @@
     }
     .hero {
       background-image: url('../../../assets/contactback2.png');
-      background-size: cover;}
+      background-size: cover;
+      height: 50vh;
+      display: flex;
+    }
+    .hero:first-child{
+      margin: auto;
+    }
 
   }

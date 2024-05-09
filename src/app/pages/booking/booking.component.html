@@ -1,6 +1,13 @@
 <p-toast />
+<ng-template #successTpl> <span class="bi-check-circle-fill">&nbsp;</span>Service Booked successfully </ng-template>
+<ng-template #errorTpl><span class="bi-x-circle-fill">&nbsp;</span> Error, Please try again </ng-template>
+
+
 
 <section class=" d-flex flex-column m-5 p-5">
+    <!-- <p-button pRipple (click)="notification()" label="Show" /> -->
+
+    
     <b>Book a service</b>
     <p class="fs-5">Book a schedule in <span class="blueify"> 60 seconds</span> and get a <span
             class="blueify">quote</span> today</p>
@@ -48,14 +55,15 @@
                         >
                         <option selected disabled>Select Service</option>
                         <option *ngFor="let services of ['Office cleaning', 'Church Cleaning', 'Supermarket Cleaning', 'Industrial Facility Cleaning'
-                                                            , 'Residential/Home Cleaning', 'Healthcare Facility Cleaning ', 'Commercial Building Cleaning']">
-
+                                                            , 'Residential/Home Cleaning', 'Healthcare Facility Cleaning ', 'Commercial Building Cleaning', 'Custom Type']">
                                                             {{services}}
                         </option>
+                        
                     </select>
+                    <input *ngIf="BookingFormGroup.get('type_of_cleaning')?.value == 'Custom Type'" formControlName="customType" class="form-control" placeholder="Enter custom option">
                     <small *ngIf="BookingFormGroup.get('type_of_cleaning')?.touched && BookingFormGroup.get('type_of_cleaning')?.hasError('required')"
-                                    class="text-danger">
-                                    Field Required
+                    class="text-danger">
+                    Field Required
                             </small>
 
                 </div>
@@ -110,7 +118,7 @@
 
             </div>
 
-            <button *ngIf="!buttonLoader" [disabled]="this.BookingFormGroup.invalid" class="m-auto primary-btn btn" (click)="submit()">Book Now</button>
+            <button *ngIf="!buttonLoader" [disabled]="this.BookingFormGroup.invalid" class="m-auto primary-btn btn" (click)="submit(successTpl, errorTpl)">Book Now</button>
             <button disabled *ngIf="buttonLoader" class="m-auto primary-btn btn "><span class="spinner-border spinner-border-sm" role="status"></span> Booking...</button>
         </form>
     </div>

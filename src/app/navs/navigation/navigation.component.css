@@ -1,6 +1,7 @@
 .pos{
     /* position: absolute;
     top:0px; */
+    padding: 0;
 }
 .soc-icon{
     background-color: #2194AB;
@@ -27,27 +28,33 @@
 }
 .header{
     width: 100%;
+    margin: 0;
     z-index: 2;
+    background-color: #2194abc3;
+    color: white;
 
+    
 }
 .contact-icon {
-    color: #02adad;
+    color: #ffffff;
     margin-right:10px ;
 }
 
 .header2{
     position: sticky;
     top: 0px;
-    background-color: rgba(255, 255, 255, 0.77);
+    background-color: #2194abc3;
+    color: white;
     backdrop-filter: blur(5px);
+    box-shadow: 0px 9px 12px 0px #0000002a;
 }
 .navigations a{
-    color: black;
+    color: white;
     margin-top: 3%;
     padding: 2px 0;
 }
 .navigations a:hover{
-    color: #02adad;
+    color: #a5fbfb;
 }
 
 .logo{
@@ -55,10 +62,11 @@
    /* filter:  drop-shadow(3px 2px 9px #000000); */
 }
 .small-screen .small-cont{
-    border-bottom: 1px solid #c6c6c6;
+    /* border-bottom: 1px solid #c6c6c6; */
 }
 .small-header button{
     font-size:xx-large;
+    color: white;
 }
 .primary-btn{
     padding-top: 0px !important;
@@ -71,6 +79,7 @@
 
 .navigations {
     height: 50px;
+    
 }
 @media (max-width:700px){
     .pos{
@@ -79,10 +88,26 @@
     .header2{
         display: none  !important;
     }
+
+    .navigations a{
+        color: #000;
+    }
+
+    .small-screen {
+    background-color: #2194abc3;
+    color: white;
+
+    }
     .small-header{
         z-index: 5;
-        background-color: rgba(255, 255, 255, 0.77);
+    background-color: #2194abc3;
+    box-shadow: 0px 9px 12px 0px #0000002a;
+
         backdrop-filter: blur(5px);
+    }
+    .active{
+        color: #2194AB !important;
+        border-bottom: 1px solid #2194AB;
     }
 }
 
@@ -100,11 +125,11 @@
     }
     
     
+    .active{
+        border-bottom: 2px solid white;
+        color: white !important;
     
-}
-.active{
-    border-bottom: 2px solid #02adad;
-    color: #02adad !important;
-
-
+    
+    }
+    
 }

@@ -5,6 +5,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { BookingComponent } from './pages/booking/booking.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { NgbdToastGlobal } from './toast/toast-global.component';
 
 export const routes: Routes = [{
   path: '',
@@ -30,5 +31,9 @@ export const routes: Routes = [{
 {
   path: 'admin',
   component: DashboardComponent
+},
+{
+  path: 'toast',
+  component: NgbdToastGlobal
 },
 ];
