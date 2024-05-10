@@ -54,11 +54,11 @@
                     <select required type="type_of_cleaning" formControlName="type_of_cleaning" class="form-control col-6" id="type_of_cleaning"
                         >
                         <option selected disabled>Select Service</option>
-                        <option value='Custom Type'>Insert Custom Service</option>
                         <option *ngFor="let services of ['Office cleaning', 'Church Cleaning', 'Supermarket Cleaning', 'Industrial Facility Cleaning'
                                                             , 'Residential/Home Cleaning', 'Healthcare Facility Cleaning ', 'Commercial Building Cleaning']">
                                                             {{services}}
-                        </option>
+                                                        </option>
+                                                        <option value='Custom Type' class="text-warning">Insert Custom Service</option>
                         
                     </select>
                     <input *ngIf="BookingFormGroup.get('type_of_cleaning')?.value == 'Custom Type'" formControlName="customType" class="form-control" placeholder="Enter custom option">
@@ -109,8 +109,8 @@
             <div class="form-floating   mb-3">
 
                 <input type="additional_comments" class="form-control col-6" formControlName="additional_comments"
-                    id="additional_comments" placeholder="Enter Message">
-                <label for="additional_comments">Enter Message </label>
+                    id="additional_comments" placeholder="Enter Additional Request">
+                <label for="additional_comments">Enter Additional Request </label>
                 <small *ngIf="BookingFormGroup.get('additional_comments')?.touched && BookingFormGroup.get('additional_comments')?.hasError('required')"
                 class="text-danger">
                 Field Required

@@ -145,6 +145,10 @@
   font-size: smaller;
 }
 
+.services .primary-btn{
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+}
 
 @media (max-width:700px) {
   .hero {

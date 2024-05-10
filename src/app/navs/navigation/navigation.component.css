@@ -30,26 +30,28 @@
     width: 100%;
     margin: 0;
     z-index: 2;
-    background-color: #2194abc3;
-    color: white;
+        background-color: white;
+
+    color: #2194AB;
 
     
 }
 .contact-icon {
-    color: #ffffff;
+    color: #2194AB;
     margin-right:10px ;
 }
 
 .header2{
     position: sticky;
     top: 0px;
-    background-color: #2194abc3;
+        background-color: white;
+
     color: white;
     backdrop-filter: blur(5px);
     box-shadow: 0px 9px 12px 0px #0000002a;
 }
 .navigations a{
-    color: white;
+    color: #2194AB;
     margin-top: 3%;
     padding: 2px 0;
 }
@@ -66,7 +68,7 @@
 }
 .small-header button{
     font-size:xx-large;
-    color: white;
+    color: #2194AB;
 }
 .primary-btn{
     padding-top: 0px !important;
@@ -94,13 +96,14 @@
     }
 
     .small-screen {
-    background-color: #2194abc3;
-    color: white;
+    background-color: white;
+    color: #2194AB;
 
     }
     .small-header{
         z-index: 5;
-    background-color: #2194abc3;
+        background-color: white;
+
     box-shadow: 0px 9px 12px 0px #0000002a;
 
         backdrop-filter: blur(5px);
@@ -126,8 +129,8 @@
     
     
     .active{
-        border-bottom: 2px solid white;
-        color: white !important;
+        border-bottom: 2px solid #2194AB;
+        color: #2194AB !important;
     
     
     }
