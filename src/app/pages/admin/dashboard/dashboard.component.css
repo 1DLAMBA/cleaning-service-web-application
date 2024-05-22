@@ -20,4 +20,7 @@ a:hover{
     .card{
         padding: 0 !important;
     }
+    .big-skel{
+        display: none !important;
+    }
 }
