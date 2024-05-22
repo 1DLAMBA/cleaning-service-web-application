@@ -39,7 +39,7 @@ export class BookingComponent implements OnInit, OnDestroy{
       customType: new FormControl(''),
       number_of_rooms: new FormControl('', Validators.required),
       // special_requests: new FormControl('', Validators.required),
-      additional_comments: new FormControl('', Validators.required),
+      additional_comments: new FormControl(''),
 
     })
   }

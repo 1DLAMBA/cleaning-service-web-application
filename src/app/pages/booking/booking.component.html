@@ -53,7 +53,7 @@
                     <label for="">Select Services</label>
                     <select required type="type_of_cleaning" formControlName="type_of_cleaning" class="form-control col-6" id="type_of_cleaning"
                         >
-                        <option selected disabled>Select Service</option>
+                        <option selected disabled value="">Select a Service</option>
                         <option *ngFor="let services of ['Office cleaning', 'Church Cleaning', 'Supermarket Cleaning', 'Industrial Facility Cleaning'
                                                             , 'Residential/Home Cleaning', 'Healthcare Facility Cleaning ', 'Commercial Building Cleaning']">
                                                             {{services}}
@@ -109,12 +109,12 @@
             <div class="form-floating   mb-3">
 
                 <input type="additional_comments" class="form-control col-6" formControlName="additional_comments"
-                    id="additional_comments" placeholder="Enter Additional Request">
-                <label for="additional_comments">Enter Additional Request </label>
-                <small *ngIf="BookingFormGroup.get('additional_comments')?.touched && BookingFormGroup.get('additional_comments')?.hasError('required')"
+                    id="additional_comments" placeholder="Enter Additional Request (optional)">
+                <label for="additional_comments">Enter Additional Request (optional) </label>
+                <!-- <small *ngIf="BookingFormGroup.get('additional_comments')?.touched && BookingFormGroup.get('additional_comments')?.hasError('required')"
                 class="text-danger">
                 Field Required
-        </small>
+        </small> -->
             </div>
 
             </div>
