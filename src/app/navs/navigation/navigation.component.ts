@@ -23,5 +23,9 @@ export class NavigationComponent {
   email(){
     window.location.href=`mailto:aandcleaner@gmail.com`
   }
+  tiktok(){
+    window.open('https://www.tiktok.com/@ab.cleaner.janito?_t=8mSv5gZ4cmz&_r=1', '_blank');
+
+  }
 
 }
